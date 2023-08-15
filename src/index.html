@@ -5,6 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Giard Design</title>
 		<link rel="stylesheet" href="../public/styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
 		<script src="./app.js" defer></script>
 	</head>
 	<body>
@@ -102,81 +108,83 @@
 		</header>
 
 		<!-- Swiper -->
-		<section class="flex">
-			<div class="basis-1/2 bg-[#DCC1AB]">
-				<div class="w-[37.4375rem] py-[9rem] pl-20 pr-16">
-					<h1 class="text-[3.75rem] leading-[4.375rem] pb-11 font-medium">
-						Nowoczesna <br />
-						aranżacja <br />
-						Twojego ogrodu
-					</h1>
-					<p class="mb-[4.5rem]">
-						Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
-						realizacji. Oferujemy kompleksowy zakres usług <br />
-						z indywidualnym podejściem do każdego projektu.
-					</p>
-					<div class="flex items-center justify-between">
-						<button
-							class="bg-[#1B5B31] text-[#fff] py-3 px-6 rounded-[12.5rem]"
-						>
-							Skontaktuj się z nami
-						</button>
-						<button
-							class="flex items-center text-[#1B5B31] border border-[#1B5B31] rounded-[12.5rem] py-3 px-[1.38rem]"
-						>
-							Zobacz nasze realizacje
-							<div class="ml-2">
-								<svg
-									class="w-4 h-4"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 16 17"
-									fill="none"
-								>
-									<path
-										d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
-										fill="#1B5B31"
-									/>
-								</svg>
-							</div>
-						</button>
+		<section class="flex max-h-[46rem] bg-[#DCC1AB]">
+			<div class="flex pl-[calc((100%-78.875rem)/2)]">
+				<div class="flex justify-center items-center">
+					<div class="w-[37.4375rem]">
+						<h1 class="text-[3.75rem] leading-[4.375rem] pb-11 font-medium">
+							Nowoczesna <br />
+							aranżacja <br />
+							Twojego ogrodu
+						</h1>
+						<p class="mb-[4.5rem]">
+							Marka GiardDesign to wieloletnie doświadczenie i wysoka <br />
+							estetyka realizacji. Oferujemy kompleksowy zakres usług <br />
+							z indywidualnym podejściem do każdego projektu.
+						</p>
+						<div class="flex items-center gap-9">
+							<a
+								href="#instagram"
+								class="bg-[#1B5B31] text-[#fff] py-3 px-6 rounded-[12.5rem]"
+							>
+								Skontaktuj się z nami
+							</a>
+							<a
+								href="#projects"
+								class="flex items-center text-[#1B5B31] border border-[#1B5B31] rounded-[12.5rem] py-3 px-[1.38rem]"
+							>
+								Zobacz nasze realizacje
+								<div class="ml-2">
+									<svg
+										class="w-4 h-4"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 16 17"
+										fill="none"
+									>
+										<path
+											d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
+											fill="#1B5B31"
+										/>
+									</svg>
+								</div>
+							</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="basis-1/2 object-cover relative">
-				<img
-					class="w-full h-full"
-					src="../public/img/swiper-photo.png"
-					alt=""
-				/>
 				<div
-					class="flex items-center gap-8 px-8 py-6 absolute right-0 bottom-0 bg-white"
+					class="w-[calc(100%-37.4375rem)] relative object-cover overflow-hidden"
 				>
-					<button>
-						<svg
-							class="w-6 h-6"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 27 24"
-							fill="none"
-						>
-							<path
-								d="M0.795114 10.9393C0.209327 11.5251 0.209327 12.4749 0.795114 13.0607L10.3411 22.6066C10.9268 23.1924 11.8766 23.1924 12.4624 22.6066C13.0482 22.0208 13.0482 21.0711 12.4624 20.4853L3.97709 12L12.4624 3.51472C13.0482 2.92893 13.0482 1.97918 12.4624 1.3934C11.8766 0.807611 10.9268 0.807611 10.3411 1.3934L0.795114 10.9393ZM26.1442 10.5L1.85577 10.5L1.85577 13.5L26.1442 13.5L26.1442 10.5Z"
-								fill="black"
-							/>
-						</svg>
-					</button>
-					<button>
-						<svg
-							class="w-6 h-6"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 27 24"
-							fill="none"
-						>
-							<path
-								d="M26.2049 13.0607C26.7907 12.4749 26.7907 11.5251 26.2049 10.9393L16.6589 1.3934C16.0732 0.807612 15.1234 0.807612 14.5376 1.3934C13.9518 1.97918 13.9518 2.92893 14.5376 3.51472L23.0229 12L14.5376 20.4853C13.9518 21.0711 13.9518 22.0208 14.5376 22.6066C15.1234 23.1924 16.0732 23.1924 16.6589 22.6066L26.2049 13.0607ZM0.855774 13.5H25.1442V10.5H0.855774V13.5Z"
-								fill="black"
-							/>
-						</svg>
-					</button>
+					<img class="" src="../public/img/swiper-photo.png" alt="" />
+					<div
+						class="flex items-center gap-8 px-8 py-6 absolute right-0 bottom-0 bg-white"
+					>
+						<button>
+							<svg
+								class="w-6 h-6"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 27 24"
+								fill="none"
+							>
+								<path
+									d="M0.795114 10.9393C0.209327 11.5251 0.209327 12.4749 0.795114 13.0607L10.3411 22.6066C10.9268 23.1924 11.8766 23.1924 12.4624 22.6066C13.0482 22.0208 13.0482 21.0711 12.4624 20.4853L3.97709 12L12.4624 3.51472C13.0482 2.92893 13.0482 1.97918 12.4624 1.3934C11.8766 0.807611 10.9268 0.807611 10.3411 1.3934L0.795114 10.9393ZM26.1442 10.5L1.85577 10.5L1.85577 13.5L26.1442 13.5L26.1442 10.5Z"
+									fill="black"
+								/>
+							</svg>
+						</button>
+						<button>
+							<svg
+								class="w-6 h-6"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 27 24"
+								fill="none"
+							>
+								<path
+									d="M26.2049 13.0607C26.7907 12.4749 26.7907 11.5251 26.2049 10.9393L16.6589 1.3934C16.0732 0.807612 15.1234 0.807612 14.5376 1.3934C13.9518 1.97918 13.9518 2.92893 14.5376 3.51472L23.0229 12L14.5376 20.4853C13.9518 21.0711 13.9518 22.0208 14.5376 22.6066C15.1234 23.1924 16.0732 23.1924 16.6589 22.6066L26.2049 13.0607ZM0.855774 13.5H25.1442V10.5H0.855774V13.5Z"
+									fill="black"
+								/>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -185,17 +193,19 @@
 		<section class="bg-[#F5F0EC] pt-[7.5rem] pb-40" id="oferta">
 			<div class="max-w-[78.875rem] mx-auto">
 				<div class="w-[65rem] m-auto mb-24">
-					<span class="text-[#1B5B31] block text-xs pb-4">Oferta</span>
-					<h2 class="text-5xl pb-8 font-medium">
-						Działamy <span class="italic">kompleksowo</span>
-					</h2>
-					<p class="w-[44.3125rem] text-[#111]">
-						Oferujemy kompletną obsługę inwestycji terenów zielonych.
-						Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
-						Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy <br />
-						w życie, a na każdym etapie posłużymy radą i wieloletnim
-						doświadczeniem.
-					</p>
+					<div class="w-[44.3125rem]">
+						<span class="text-[#1B5B31] block text-xs pb-4">Oferta</span>
+						<h2 class="text-5xl pb-8 font-medium">
+							Działamy <span class="italic">kompleksowo</span>
+						</h2>
+						<p class="text-[#111]">
+							Oferujemy kompletną obsługę inwestycji terenów zielonych.
+							Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
+							Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w
+							życie, a na każdym etapie posłużymy radą i wieloletnim
+							doświadczeniem.
+						</p>
+					</div>
 				</div>
 				<!-- Cards -->
 				<div class="flex items-center justify-between">
@@ -290,9 +300,9 @@
 			</div>
 		</section>
 		<!-- O firmie -->
-		<section class="flex" id="firma">
-			<div class="basis-1/2 object-cover">
-				<img class="w-full h-full" src="../public/img/firma-photo.png" alt="" />
+		<section class="flex max-h-[46rem]" id="firma">
+			<div class="basis-1/2 object-cover overflow-hidden">
+				<img class="" src="../public/img/firma-photo.png" alt="" />
 			</div>
 
 			<div
@@ -412,9 +422,12 @@
 					</a>
 					<div class="flex items-center gap-6">
 						<p>Daj znać, co możemy dla Ciebie zrobić!</p>
-						<button class="py-3 px-6 rounded-[12.5rem] bg-[#1B5B31]">
+						<a
+							href="https://www.instagram.com/"
+							class="py-3 px-6 rounded-[12.5rem] bg-[#1B5B31]"
+						>
 							Skontaktuj się z nami
-						</button>
+						</a>
 					</div>
 				</div>
 
