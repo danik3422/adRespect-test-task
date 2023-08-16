@@ -688,16 +688,16 @@ html {
   width: 65rem;
 }
 
+.w-\[calc\(100\%-31\.25rem\)\] {
+  width: calc(100% - 31.25rem);
+}
+
 .w-\[calc\(100\%-37\.4375rem\)\] {
   width: calc(100% - 37.4375rem);
 }
 
 .max-w-\[78\.875rem\] {
   max-width: 78.875rem;
-}
-
-.basis-1\/2 {
-  flex-basis: 50%;
 }
 
 .cursor-pointer {
@@ -718,6 +718,10 @@ html {
 
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-16 {
+  gap: 4rem;
 }
 
 .gap-3 {
@@ -916,20 +920,20 @@ html {
   padding-bottom: 2rem;
 }
 
+.pl-\[calc\(\(100\%-78\.875rem\)\/2\)\] {
+  padding-left: calc((100% - 78.875rem) / 2);
+}
+
+.pr-\[calc\(\(100\%-78\.875rem\)\/2\)\] {
+  padding-right: calc((100% - 78.875rem) / 2);
+}
+
 .pt-28 {
   padding-top: 7rem;
 }
 
 .pt-\[7\.5rem\] {
   padding-top: 7.5rem;
-}
-
-.pl-\[calc\(100\%-78\.875rem\)\/2\] {
-  padding-left: calc(100% - 78.875rem)/2;
-}
-
-.pl-\[calc\(\(100\%-78\.875rem\)\/2\)\] {
-  padding-left: calc((100% - 78.875rem) / 2);
 }
 
 .text-5xl {
@@ -1062,6 +1066,11 @@ html {
   background-color: rgb(247 247 247 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.swiper-wrapper {
+  width: 100%;
+  max-height: 46rem;
 }
 
 .hover\:bg-gray-100:hover {

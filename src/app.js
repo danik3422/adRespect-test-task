@@ -1,3 +1,16 @@
+//Creating a slider
+const swiper = new Swiper('.swiper', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '#right',
+		prevEl: '#left',
+	},
+})
+
 window.onload = () => {
 	const grid = document.querySelector('.masonry')
 
