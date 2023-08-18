@@ -1,9 +1,9 @@
-# Recruitment Project for adRespect  
+# Recruitment Project for adRespect
 
-[LIVE DEMO]() //NOT YET
-
+[LIVE DEMO](https://danik3422.github.io/adRespect-test-task/#oferta)
 
 ## Tasks
+
 1 - The project should be based on bootstrap or tailwind ✅
 
 2 - The design should consist of tablet and mobile (fold it according to your taste, although we usually design mobile views) ✅
@@ -13,6 +13,7 @@
 4 - Don't use react or any other JS framework in the project - we want to see your clean code ✅
 
 ## Technologies Used
+
 - **JavaScript:** Core scripting language for interactivity and functionality.
 - **Tailwind CSS:** Utility-first CSS framework for responsive and efficient styling.
 - **Swiper:** For creating slider.
@@ -20,5 +21,6 @@
 - **CSS:** Styling and layout of the web page.
 - **Masonry:** JavaScript grid layout library.
 
-##  Design
+## Design
+
 The design was created by [adRespect](https://adrespect.pl)
