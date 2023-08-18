@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Giard Design</title>
+
 		<link rel="stylesheet" href="../public/styles.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,12 +17,14 @@
 			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 		/>
 
-		<script type="module" src="./app.js" defer></script>
+		<script src="./app.js" defer></script>
 	</head>
 	<body>
 		<!-- Navigation -->
-		<header class="py-6">
-			<nav class="flex justify-between items-center max-w-[78.875rem] mx-auto">
+		<header class="py-6 relative">
+			<nav
+				class="flex justify-between items-center max-w-[78.875rem] mx-auto px-2"
+			>
 				<a href="#">
 					<img
 						class="w-28 h-5"
@@ -29,7 +32,8 @@
 						alt="giard logo"
 					/>
 				</a>
-				<ul class="flex items-center gap-12 text-sm">
+
+				<ul class="hidden lg:flex items-center gap-12 text-sm">
 					<li class="relative">
 						<button
 							id="dropdownHoverButton"
@@ -111,277 +115,214 @@
 						</div>
 					</li>
 				</ul>
+				<!-- Mobile Menu Btn -->
+				<div class="lg:hidden flex items-center">
+					<button class="outline-none mobile-menu-button">
+						<svg
+							class="w-6 h-6 text-gray-500"
+							x-show="!showMenu"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+				</div>
 			</nav>
+			<!-- Mobile menu -->
+			<div
+				class="hidden mobile-menu absolute left-0 top-[72px] z-10 bg-white w-full"
+			>
+				<ul class="text-center">
+					<li>
+						<a
+							href="#oferta"
+							class="block text-sm px-2 py-4 hover:bg-gray-200 transition duration-300"
+							>Oferta</a
+						>
+					</li>
+					<li>
+						<a
+							class="block text-sm px-2 py-4 hover:bg-gray-200 transition duration-300"
+							href="#firma"
+							>O firmie</a
+						>
+					</li>
+					<li>
+						<a
+							class="block text-sm px-2 py-4 hover:bg-gray-200 transition duration-300"
+							href="#projects"
+							>Realizacje</a
+						>
+					</li>
+					<li>
+						<a
+							class="block text-sm px-2 py-4 hover:bg-gray-200 transition duration-300"
+							href="#instagram"
+							>Kontakt</a
+						>
+					</li>
+				</ul>
+			</div>
 		</header>
 
 		<!-- Swiper -->
-		<section class="swiper flex max-h-[46rem] bg-[#DCC1AB]">
+		<section class="swiper flex bg-[#DCC1AB]">
 			<div class="swiper-wrapper flex">
-				<div class="swiper-slide flex pl-[calc((100%-78.875rem)/2)]">
-					<div class="flex gap-16">
-						<div class="flex justify-center items-center">
-							<div class="w-[37.4375rem]">
-								<h1 class="text-[3.75rem] leading-[4.375rem] pb-11 font-medium">
-									Nowoczesna <br />
-									aranżacja <br />
-									Twojego ogrodu
-								</h1>
-								<p class="mb-[4.5rem]">
-									Marka GiardDesign to wieloletnie doświadczenie i wysoka <br />
-									estetyka realizacji. Oferujemy kompleksowy zakres usług <br />
-									z indywidualnym podejściem do każdego projektu.
-								</p>
-								<div class="flex items-center gap-9">
-									<a
-										href="#instagram"
-										class="bg-[#1B5B31] text-[#fff] py-3 px-6 rounded-[12.5rem] hover:bg-white hover:text-black"
-									>
-										Skontaktuj się z nami
-									</a>
+				<!-- Slider-1 -->
+				<div
+					class="swiper-slide !flex !h-[46rem] gap-16 pl-[calc((100%-78.875rem)/2)] lg:justify-normal justify-center relative"
+				>
+					<div class="flex justify-center items-center lg:z-10 z-10">
+						<div class="lg:w-[37.4375rem] max-w-[37.4375rem]">
+							<h1
+								class="lg:text-[3.75rem] text-5xl lg:leading-[4.375rem] leading-[3.75rem] lg:pb-11 pb-7 font-medium"
+							>
+								Nowoczesna <br />
+								aranżacja <br />
+								Twojego ogrodu
+							</h1>
+							<p class="mb-[4.5rem] max-w-[30rem]">
+								Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+								realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+								podejściem do każdego projektu.
+							</p>
 
-									<a
-										href="#projects"
-										class="relative group overflow-hidden rounded-[12.5rem] py-3 px-[1.38rem] text-[#1B5B31] border border-[#1B5B31] bg-transparent"
+							<div class="flex items-center gap-9 lg:flex-row flex-col">
+								<a
+									href="#instagram"
+									class="bg-[#1B5B31] text-[#fff] py-3 px-6 rounded-[12.5rem] hover:bg-white hover:text-black lg:w-auto w-full text-center"
+								>
+									Skontaktuj się z nami
+								</a>
+								<a
+									href="#projects"
+									class="relative group overflow-hidden rounded-[12.5rem] py-3 px-[1.38rem] text-[#1B5B31] border border-[#1B5B31] bg-transparent lg:w-auto w-full"
+								>
+									<span
+										class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#1B5B31] group-hover:h-full opacity-90"
+									></span>
+									<span
+										class="relative group-hover:text-white flex items-center justify-center"
 									>
-										<span
-											class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#1B5B31] group-hover:h-full opacity-90"
-										></span>
-										<span
-											class="relative group-hover:text-white flex items-center"
-											>Zobacz nasze realizacje
-											<div class="ml-2">
-												<svg
-													class="w-4 h-4 group-hover:fill-white"
-													xmlns="http://www.w3.org/2000/svg"
-													viewBox="0 0 16 17"
-													fill="#1B5B31"
-												>
-													<path
-														d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
-													/>
-												</svg></div
-										></span>
-									</a>
-								</div>
+										Zobacz nasze realizacje
+										<div class="ml-2">
+											<svg
+												class="w-4 h-4 group-hover:fill-white"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 16 17"
+												fill="#1B5B31"
+											>
+												<path
+													d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
+												/>
+											</svg></div
+									></span>
+								</a>
 							</div>
 						</div>
+					</div>
+					<div
+						class="lg:block hidden w-[calc(100%-37.4375rem)] relative object-cover overflow-hidden"
+					>
+						<img
+							class="h-full w-full object-cover"
+							src="../public/img/swiper-photo.png"
+							alt=""
+						/>
+					</div>
+					<img
+						class="h-full w-full object-cover absolute top-0 left-0 opacity-20 lg:hidden"
+						src="../public/img/swiper-photo.png"
+						alt=""
+					/>
+				</div>
+				<!-- Slider-2 -->
+				<div
+					class="swiper-slide !flex !h-[46rem] gap-16 pl-[calc((100%-78.875rem)/2)] lg:justify-normal justify-center relative"
+				>
+					<div class="flex justify-center items-center lg:z-10 z-10">
+						<div class="lg:w-[37.4375rem] max-w-[37.4375rem]">
+							<h1
+								class="lg:text-[3.75rem] text-5xl lg:leading-[4.375rem] leading-[3.75rem] lg:pb-11 pb-7 font-medium"
+							>
+								Nowoczesna <br />
+								aranżacja <br />
+								Twojego ogrodu
+							</h1>
+							<p class="mb-[4.5rem] max-w-[30rem]">
+								Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+								realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+								podejściem do każdego projektu.
+							</p>
 
-						<div
-							class="w-[calc(100%-37.4375rem)] relative object-cover overflow-hidden"
-						>
-							<img class="" src="../public/img/swiper-photo.png" alt="" />
-							<div
-								class="flex items-center gap-8 px-8 py-6 absolute right-0 bottom-0 bg-white"
-							>
-								<button id="left">
-									<svg
-										class="w-6 h-6"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 27 24"
-										fill="none"
+							<div class="flex items-center gap-9 lg:flex-row flex-col">
+								<a
+									href="#instagram"
+									class="bg-[#1B5B31] text-[#fff] py-3 px-6 rounded-[12.5rem] hover:bg-white hover:text-black lg:w-auto w-full text-center"
+								>
+									Skontaktuj się z nami
+								</a>
+								<a
+									href="#projects"
+									class="relative group overflow-hidden rounded-[12.5rem] py-3 px-[1.38rem] text-[#1B5B31] border border-[#1B5B31] bg-transparent lg:w-auto w-full"
+								>
+									<span
+										class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#1B5B31] group-hover:h-full opacity-90"
+									></span>
+									<span
+										class="relative group-hover:text-white flex items-center justify-center"
 									>
-										<path
-											d="M0.795114 10.9393C0.209327 11.5251 0.209327 12.4749 0.795114 13.0607L10.3411 22.6066C10.9268 23.1924 11.8766 23.1924 12.4624 22.6066C13.0482 22.0208 13.0482 21.0711 12.4624 20.4853L3.97709 12L12.4624 3.51472C13.0482 2.92893 13.0482 1.97918 12.4624 1.3934C11.8766 0.807611 10.9268 0.807611 10.3411 1.3934L0.795114 10.9393ZM26.1442 10.5L1.85577 10.5L1.85577 13.5L26.1442 13.5L26.1442 10.5Z"
-											fill="black"
-										/>
-									</svg>
-								</button>
-								<button id="right">
-									<svg
-										class="w-6 h-6"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 27 24"
-										fill="none"
-									>
-										<path
-											d="M26.2049 13.0607C26.7907 12.4749 26.7907 11.5251 26.2049 10.9393L16.6589 1.3934C16.0732 0.807612 15.1234 0.807612 14.5376 1.3934C13.9518 1.97918 13.9518 2.92893 14.5376 3.51472L23.0229 12L14.5376 20.4853C13.9518 21.0711 13.9518 22.0208 14.5376 22.6066C15.1234 23.1924 16.0732 23.1924 16.6589 22.6066L26.2049 13.0607ZM0.855774 13.5H25.1442V10.5H0.855774V13.5Z"
-											fill="black"
-										/>
-									</svg>
-								</button>
+										Zobacz nasze realizacje
+										<div class="ml-2">
+											<svg
+												class="w-4 h-4 group-hover:fill-white"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 16 17"
+												fill="#1B5B31"
+											>
+												<path
+													d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
+												/>
+											</svg></div
+									></span>
+								</a>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="swiper-slide flex pl-[calc((100%-78.875rem)/2)]">
-					<div class="flex gap-16">
-						<div class="flex justify-center items-center">
-							<div class="w-[37.4375rem]">
-								<h1 class="text-[3.75rem] leading-[4.375rem] pb-11 font-medium">
-									Nowoczesna <br />
-									aranżacja <br />
-									Twojego ogrodu
-								</h1>
-								<p class="mb-[4.5rem]">
-									Marka GiardDesign to wieloletnie doświadczenie i wysoka <br />
-									estetyka realizacji. Oferujemy kompleksowy zakres usług <br />
-									z indywidualnym podejściem do każdego projektu.
-								</p>
-								<div class="flex items-center gap-9">
-									<a
-										href="#instagram"
-										class="bg-[#1B5B31] text-[#fff] py-3 px-6 rounded-[12.5rem] hover:bg-white hover:text-black"
-									>
-										Skontaktuj się z nami
-									</a>
-									<a
-										href="#projects"
-										class="relative group overflow-hidden rounded-[12.5rem] py-3 px-[1.38rem] text-[#1B5B31] border border-[#1B5B31] bg-transparent"
-									>
-										<span
-											class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#1B5B31] group-hover:h-full opacity-90"
-										></span>
-										<span
-											class="relative group-hover:text-white flex items-center"
-											>Zobacz nasze realizacje
-											<div class="ml-2">
-												<svg
-													class="w-4 h-4 group-hover:fill-white"
-													xmlns="http://www.w3.org/2000/svg"
-													viewBox="0 0 16 17"
-													fill="#1B5B31"
-												>
-													<path
-														d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
-													/>
-												</svg></div
-										></span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div
-							class="w-[calc(100%-37.4375rem)] relative object-cover overflow-hidden"
-						>
-							<img class="" src="../public/img/swiper-photo.png" alt="" />
-							<div
-								class="flex items-center gap-8 px-8 py-6 absolute right-0 bottom-0 bg-white"
-							>
-								<button id="left">
-									<svg
-										class="w-6 h-6"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 27 24"
-										fill="none"
-									>
-										<path
-											d="M0.795114 10.9393C0.209327 11.5251 0.209327 12.4749 0.795114 13.0607L10.3411 22.6066C10.9268 23.1924 11.8766 23.1924 12.4624 22.6066C13.0482 22.0208 13.0482 21.0711 12.4624 20.4853L3.97709 12L12.4624 3.51472C13.0482 2.92893 13.0482 1.97918 12.4624 1.3934C11.8766 0.807611 10.9268 0.807611 10.3411 1.3934L0.795114 10.9393ZM26.1442 10.5L1.85577 10.5L1.85577 13.5L26.1442 13.5L26.1442 10.5Z"
-											fill="black"
-										/>
-									</svg>
-								</button>
-								<button id="right">
-									<svg
-										class="w-6 h-6"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 27 24"
-										fill="none"
-									>
-										<path
-											d="M26.2049 13.0607C26.7907 12.4749 26.7907 11.5251 26.2049 10.9393L16.6589 1.3934C16.0732 0.807612 15.1234 0.807612 14.5376 1.3934C13.9518 1.97918 13.9518 2.92893 14.5376 3.51472L23.0229 12L14.5376 20.4853C13.9518 21.0711 13.9518 22.0208 14.5376 22.6066C15.1234 23.1924 16.0732 23.1924 16.6589 22.6066L26.2049 13.0607ZM0.855774 13.5H25.1442V10.5H0.855774V13.5Z"
-											fill="black"
-										/>
-									</svg>
-								</button>
-							</div>
-						</div>
+					<div
+						class="lg:block hidden w-[calc(100%-37.4375rem)] relative object-cover overflow-hidden"
+					>
+						<img
+							class="h-full w-full object-cover"
+							src="../public/img/swiper-photo.png"
+							alt=""
+						/>
 					</div>
-				</div>
-				<div class="swiper-slide flex pl-[calc((100%-78.875rem)/2)]">
-					<div class="flex gap-16">
-						<div class="flex justify-center items-center">
-							<div class="w-[37.4375rem]">
-								<h1 class="text-[3.75rem] leading-[4.375rem] pb-11 font-medium">
-									Nowoczesna <br />
-									aranżacja <br />
-									Twojego ogrodu
-								</h1>
-								<p class="mb-[4.5rem]">
-									Marka GiardDesign to wieloletnie doświadczenie i wysoka <br />
-									estetyka realizacji. Oferujemy kompleksowy zakres usług <br />
-									z indywidualnym podejściem do każdego projektu.
-								</p>
-								<div class="flex items-center gap-9">
-									<a
-										href="#instagram"
-										class="bg-[#1B5B31] text-[#fff] py-3 px-6 rounded-[12.5rem] hover:bg-white hover:text-black"
-									>
-										Skontaktuj się z nami
-									</a>
-									<a
-										href="#projects"
-										class="relative group overflow-hidden rounded-[12.5rem] py-3 px-[1.38rem] text-[#1B5B31] border border-[#1B5B31] bg-transparent"
-									>
-										<span
-											class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#1B5B31] group-hover:h-full opacity-90"
-										></span>
-										<span
-											class="relative group-hover:text-white flex items-center"
-											>Zobacz nasze realizacje
-											<div class="ml-2">
-												<svg
-													class="w-4 h-4 group-hover:fill-white"
-													xmlns="http://www.w3.org/2000/svg"
-													viewBox="0 0 16 17"
-													fill="#1B5B31"
-												>
-													<path
-														d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
-													/>
-												</svg></div
-										></span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div
-							class="w-[calc(100%-37.4375rem)] relative object-cover overflow-hidden"
-						>
-							<img class="" src="../public/img/swiper-photo.png" alt="" />
-							<div
-								class="flex items-center gap-8 px-8 py-6 absolute right-0 bottom-0 bg-white"
-							>
-								<button id="left">
-									<svg
-										class="w-6 h-6"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 27 24"
-										fill="none"
-									>
-										<path
-											d="M0.795114 10.9393C0.209327 11.5251 0.209327 12.4749 0.795114 13.0607L10.3411 22.6066C10.9268 23.1924 11.8766 23.1924 12.4624 22.6066C13.0482 22.0208 13.0482 21.0711 12.4624 20.4853L3.97709 12L12.4624 3.51472C13.0482 2.92893 13.0482 1.97918 12.4624 1.3934C11.8766 0.807611 10.9268 0.807611 10.3411 1.3934L0.795114 10.9393ZM26.1442 10.5L1.85577 10.5L1.85577 13.5L26.1442 13.5L26.1442 10.5Z"
-											fill="black"
-										/>
-									</svg>
-								</button>
-								<button id="right">
-									<svg
-										class="w-6 h-6"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 27 24"
-										fill="none"
-									>
-										<path
-											d="M26.2049 13.0607C26.7907 12.4749 26.7907 11.5251 26.2049 10.9393L16.6589 1.3934C16.0732 0.807612 15.1234 0.807612 14.5376 1.3934C13.9518 1.97918 13.9518 2.92893 14.5376 3.51472L23.0229 12L14.5376 20.4853C13.9518 21.0711 13.9518 22.0208 14.5376 22.6066C15.1234 23.1924 16.0732 23.1924 16.6589 22.6066L26.2049 13.0607ZM0.855774 13.5H25.1442V10.5H0.855774V13.5Z"
-											fill="black"
-										/>
-									</svg>
-								</button>
-							</div>
-						</div>
-					</div>
+					<img
+						class="h-full w-full object-cover absolute top-0 left-0 opacity-20 lg:hidden"
+						src="../public/img/swiper-photo.png"
+						alt=""
+					/>
 				</div>
 			</div>
 		</section>
 
 		<!-- Oferta -->
 		<section class="bg-[#F5F0EC] pt-[7.5rem] pb-40" id="oferta">
-			<div class="max-w-[78.875rem] mx-auto">
-				<div class="w-[65rem] m-auto mb-24">
-					<div class="w-[44.3125rem]">
+			<div class="max-w-[78.875rem] mx-auto px-2">
+				<div class="lg:w-[65rem] m-auto mb-24">
+					<div class="lg:w-[44.3125rem]">
 						<span class="text-[#1B5B31] block text-xs pb-4">Oferta</span>
-						<h2 class="text-5xl pb-8 font-medium">
-							Działamy <span class="italic">kompleksowo</span>
+						<h2
+							class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl pb-8 font-medium"
+						>
+							Działamy
+							<span class="italic">kompleksowo</span>
 						</h2>
 						<p class="text-[#111]">
 							Oferujemy kompletną obsługę inwestycji terenów zielonych.
@@ -393,10 +334,10 @@
 					</div>
 				</div>
 				<!-- Cards -->
-				<div class="flex items-center justify-between">
+				<div class="flex items-center justify-center flex-wrap gap-8">
 					<!-- Card-1 -->
 					<div
-						class="bg-white rounded-[1.75rem] w-[23.625rem] h-[23.125rem] px-10 py-12 transform transition-transform hover:scale-105"
+						class="bg-white rounded-[1.75rem] md:w-[23.625rem] h-[23.125rem] px-10 py-12 transform transition-transform hover:scale-105"
 					>
 						<div class="mb-8">
 							<img src="../public/img/pencil.svg" alt="" />
@@ -426,7 +367,7 @@
 					</div>
 					<!-- Card-2 -->
 					<div
-						class="bg-white rounded-[1.75rem] w-[23.625rem] h-[23.125rem] px-10 py-12 transform transition-transform hover:scale-105"
+						class="bg-white rounded-[1.75rem] md:w-[23.625rem] h-[23.125rem] px-10 py-12 transform transition-transform hover:scale-105"
 					>
 						<div class="mb-8">
 							<img src="../public/img/eye.svg" alt="" />
@@ -456,7 +397,7 @@
 					</div>
 					<!-- Card-3 -->
 					<div
-						class="bg-white rounded-[1.75rem] w-[23.625rem] h-[23.125rem] px-10 py-12 transform transition-transform hover:scale-105"
+						class="bg-white rounded-[1.75rem] md:w-[23.625rem] h-[23.125rem] px-10 py-12 transform transition-transform hover:scale-105"
 					>
 						<div class="mb-8">
 							<img src="../public/img/stars.svg" alt="" />
@@ -488,14 +429,23 @@
 			</div>
 		</section>
 		<!-- O firmie -->
-		<section class="flex max-h-[46rem] bg-[#1B5B31] text-[#F5F0EC]" id="firma">
-			<div class="flex gap-16 pr-[calc((100%-78.875rem)/2)]">
-				<div class="w-[calc(100%-31.25rem)] object-cover overflow-hidden">
-					<img class="" src="../public/img/firma-photo.png" alt="" />
+		<section
+			class="flex max-h-[46rem] bg-[#1B5B31] text-[#F5F0EC] lg:justify-normal justify-center relative"
+			id="firma"
+		>
+			<div class="flex gap-16 pr-[calc((100%-78.875rem)/2)] justify-center">
+				<div
+					class="lg:block hidden w-[calc(100%-31.25rem)] object-cover overflow-hidden"
+				>
+					<img
+						class="h-full w-full object-cover"
+						src="../public/img/firma-photo.png"
+						alt=""
+					/>
 				</div>
 
-				<div class="flex justify-center items-center">
-					<div class="w-[31.25rem]">
+				<div class="flex justify-center items-center lg:p-0 z-10 p-4">
+					<div class="max-w-[31.25rem]">
 						<span class="text-[0.75rem] block pb-4">O firmie</span>
 						<h2 class="text-5xl font-medium leading-[3.45rem] pb-10">
 							Tworzymy <br />
@@ -535,12 +485,17 @@
 						</button>
 					</div>
 				</div>
+				<img
+					class="h-full w-full object-cover absolute top-0 left-0 opacity-20 lg:hidden"
+					src="../public/img/firma-photo.png"
+					alt=""
+				/>
 			</div>
 		</section>
 
 		<!-- Projects -->
 		<section class="bg-[#DCC1AB] pt-28" id="projects">
-			<div class="max-w-[78.875rem] mx-auto">
+			<div class="max-w-[78.875rem] mx-auto px-2">
 				<div class="pb-24">
 					<span class="text-[#1B5B31] text-xs block pb-4">Realizacje</span>
 					<h2 class="text-5xl font-medium">
@@ -548,7 +503,7 @@
 					</h2>
 				</div>
 			</div>
-			<div class="masonry">
+			<div class="masonry relative">
 				<div class="masonry-item">
 					<img class="" src="../public/img/mansonry/img1.png" alt="" />
 				</div>
@@ -576,15 +531,19 @@
 				<div class="masonry-item">
 					<img src="../public/img/mansonry/img9.png" alt="" />
 				</div>
+				<!-- Gradient -->
+				<div
+					class="absolute bg-custom-gradient w-full bottom-0 left-0 h-[70%]"
+				></div>
 			</div>
 		</section>
 
 		<!-- Instagram -->
 		<section class="bg-[#F5F0EC] py-[3.75rem]" id="instagram">
 			<div
-				class="flex justify-between bg-[#1B5B31] w-[65rem] mx-auto py-[7.5rem] px-[6.88rem] text-[#F5F0EC]"
+				class="flex justify-between bg-[#1B5B31] max-w-[65rem] mx-auto py-[7.5rem] lg:px-[6.88rem] px-4 text-[#F5F0EC] lg:flex-row flex-col text-center lg:text-left"
 			>
-				<h2 class="text-[2.5rem] leading-[3rem]">
+				<h2 class="lg:text-[2.5rem] text-2xl lg:leading-[3rem] lg:pb-0 pb-6">
 					Zostańmy w kontakcie! <br />
 					Znajdziesz nas na <span class="italic">Instagramie.</span>
 				</h2>
@@ -604,16 +563,18 @@
 		</section>
 		<!-- Footer -->
 		<footer class="bg-[#111] py-20 text-[#F5F0EC]">
-			<div class="w-[65rem] mx-auto">
-				<div class="flex items-center justify-between">
-					<a href="#">
+			<div class="max-w-[65rem] mx-auto px-2">
+				<div
+					class="flex items-center md:justify-between md:flex-row flex-col justify-center"
+				>
+					<a class="md:pb-0 pb-4" href="#">
 						<img
 							class="w-28 h-4"
 							src="../public/img/giard-logo.svg"
 							alt="giard logo"
 						/>
 					</a>
-					<div class="flex items-center gap-6">
+					<div class="flex items-center md:flex-row flex-col gap-6">
 						<p>Daj znać, co możemy dla Ciebie zrobić!</p>
 						<a
 							target="_blank"
@@ -628,9 +589,9 @@
 				<div class="border border-[#F5F0EC] my-[3.88rem]"></div>
 
 				<div
-					class="flex items-center justify-between text-[0.875rem] mb-[7.5rem]"
+					class="flex items-center justify-between text-[0.875rem] md:mb-[7.5rem] mb-12 md:flex-row flex-col"
 				>
-					<ul class="flex items-center gap-12">
+					<ul class="flex items-center md:gap-12 gap-4 pb-4 md:pb-0">
 						<li><a href="mailto:giarddesign@kontakt.pl">Kontakt</a></li>
 						<li>
 							<a href="https://www.instagram.com/" target="_blank">Instagram</a>
@@ -651,11 +612,13 @@
 						<a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
 					</div>
 				</div>
-				<div class="flex items-center justify-between">
+				<div class="flex items-center justify-between md:flex-row flex-col">
 					<p>Prawa zastrzeżone © 2023</p>
 					<div class="flex items-center gap-4">
 						<span>made by</span>
-						<img src="../public/img/footer-logo.svg" alt="" />
+						<a target="_blank" href="https://adrespect.pl/">
+							<img src="../public/img/footer-logo.svg" alt="" />
+						</a>
 					</div>
 				</div>
 			</div>
@@ -663,6 +626,7 @@
 		<!-- Scroll To Top -->
 		<button id="scrollToTopBtn" class="scrollTop hidden">Top</button>
 
+		<!-- Scripts -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 		<script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>

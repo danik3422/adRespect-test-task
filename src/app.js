@@ -46,3 +46,10 @@ window.addEventListener('scroll', () => {
 scrollToTopBtn.addEventListener('click', () => {
 	window.scrollTo({ top: 0, behavior: 'smooth' })
 })
+
+//Mobile Menu
+const btn = document.querySelector('button.mobile-menu-button')
+const menu = document.querySelector('.mobile-menu')
+btn.addEventListener('click', () => {
+	menu.classList.toggle('hidden')
+})

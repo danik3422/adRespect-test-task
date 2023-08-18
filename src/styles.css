@@ -5,23 +5,30 @@
 @layer base {
 	html {
 		font-family: 'Inter', sans-serif;
+		scroll-behavior: smooth;
 	}
 }
 
-html {
-	scroll-behavior: smooth;
+@layer utilities {
+	.bg-custom-gradient {
+		background: linear-gradient(
+			360deg,
+			#dcc1ab 0%,
+			rgba(214, 183, 158, 0) 100%
+		);
+		background-repeat: repeat; /* Set the tiling behavior */
+	}
 }
-
 .masonry {
 	@apply flex mx-auto;
 }
 
 .masonry-item {
-	@apply mb-[40px] w-[28.25rem];
+	@apply mb-[40px] max-w-[28.25rem];
 }
 
 .scrollTop {
-	@apply fixed bottom-8 left-8 px-4 py-[0.625rem] bg-black text-white rounded cursor-pointer border border-[#fff] transition-all duration-500 ease-in delay-0;
+	@apply fixed bottom-8 left-8 px-4 py-[0.625rem] bg-black text-white rounded cursor-pointer border border-[#fff] transition-all duration-500 ease-in delay-0 z-20;
 }
 .scrollTop:hover {
 	@apply bg-[#f7f7f7] text-[#000];
