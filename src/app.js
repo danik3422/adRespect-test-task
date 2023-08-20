@@ -50,8 +50,15 @@ scrollToTopBtn.addEventListener('click', () => {
 //Mobile Menu
 const btn = document.querySelector('button.mobile-menu-button')
 const menu = document.querySelector('.mobile-menu')
+const mobileLink = document.querySelectorAll('.mobile-link')
+
 btn.addEventListener('click', () => {
 	menu.classList.toggle('hidden')
+})
+mobileLink.forEach((link) => {
+	link.addEventListener('click', () => {
+		menu.classList.toggle('hidden')
+	})
 })
 
 //Album
@@ -137,5 +144,21 @@ document.addEventListener('keydown', (e) => {
 		showNextImage()
 	} else if (e.key === 'ArrowLeft') {
 		showPreviousImage()
+	}
+})
+
+//Scroll animation
+window.addEventListener('scroll', () => {
+	const reveal = document.querySelectorAll('.reveal')
+	for (let i = 0; i < reveal.length; i++) {
+		const windowHeigth = window.innerHeight
+		const revealTop = reveal[i].getBoundingClientRect().top
+		const revealPoint = 50
+
+		if (revealTop < windowHeigth - revealPoint) {
+			reveal[i].classList.add('active')
+		} else {
+			reveal[i].classList.remove('active')
+		}
 	}
 })

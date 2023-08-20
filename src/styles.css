@@ -21,6 +21,7 @@
 }
 .masonry {
 	@apply flex mx-auto;
+	overflow: hidden;
 }
 
 .masonry-item {
@@ -72,4 +73,15 @@
 
 .masonry .masonry-item {
 	cursor: pointer;
+}
+
+.reveal {
+	transform: translateY(100px);
+	opacity: 0;
+	transition: all 2s ease;
+}
+
+.reveal.active {
+	transform: translateY(0);
+	opacity: 1;
 }

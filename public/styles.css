@@ -539,6 +539,10 @@ html {
   --tw-backdrop-sepia:  ;
 }
 
+.collapse {
+  visibility: collapse;
+}
+
 .absolute {
   position: absolute;
 }
@@ -675,6 +679,10 @@ html {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-\[100\%\] {
+  height: 100%;
 }
 
 .h-\[23\.125rem\] {
@@ -1182,6 +1190,7 @@ html {
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  overflow: hidden;
 }
 
 .masonry-item {
@@ -1271,6 +1280,17 @@ html {
 
 .masonry .masonry-item {
   cursor: pointer;
+}
+
+.reveal {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .hover\:scale-105:hover {
