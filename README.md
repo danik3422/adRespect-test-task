@@ -1,6 +1,6 @@
 # Recruitment Project for adRespect
 
-[LIVE DEMO](https://danik3422.github.io/adRespect-test-task/#oferta)
+[LIVE DEMO](https://danik3422.github.io/adRespect-test-task/)
 
 ## Tasks
 
