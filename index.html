@@ -5,7 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Giard Design</title>
 
-		<link rel="stylesheet" href="./public/styles.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -17,13 +16,14 @@
 			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 		/>
 
+		<link rel="stylesheet" href="./public/styles.css" />
 		<script src="./src/app.js" defer></script>
 	</head>
 	<body>
 		<!-- Navigation -->
 		<header class="py-6 relative">
 			<nav
-				class="flex justify-between items-center max-w-[78.875rem] mx-auto px-2"
+				class="flex justify-between items-center max-w-[78.875rem] mx-auto px-4"
 			>
 				<a href="#">
 					<img
@@ -177,7 +177,9 @@
 				<div
 					class="swiper-slide !flex !h-[46rem] gap-16 pl-[calc((100%-78.875rem)/2)] lg:justify-normal justify-center relative"
 				>
-					<div class="flex justify-center items-center lg:z-10 z-10">
+					<div
+						class="flex justify-center items-center lg:z-10 z-10 lg:px-0 px-4"
+					>
 						<div class="lg:w-[37.4375rem] max-w-[37.4375rem]">
 							<h1
 								class="lg:text-[3.75rem] text-5xl lg:leading-[4.375rem] leading-[3.75rem] lg:pb-11 pb-7 font-medium"
@@ -245,7 +247,9 @@
 				<div
 					class="swiper-slide !flex !h-[46rem] gap-16 pl-[calc((100%-78.875rem)/2)] lg:justify-normal justify-center relative"
 				>
-					<div class="flex justify-center items-center lg:z-10 z-10">
+					<div
+						class="flex justify-center items-center lg:z-10 z-10 lg:px-0 px-4"
+					>
 						<div class="lg:w-[37.4375rem] max-w-[37.4375rem]">
 							<h1
 								class="lg:text-[3.75rem] text-5xl lg:leading-[4.375rem] leading-[3.75rem] lg:pb-11 pb-7 font-medium"
@@ -313,8 +317,11 @@
 		</section>
 
 		<!-- Oferta -->
-		<section class="bg-[#F5F0EC] pt-[7.5rem] pb-40" id="oferta">
-			<div class="max-w-[78.875rem] mx-auto px-2">
+		<section
+			class="bg-[#F5F0EC] lg:pt-[7.5rem] pt-12 lg:pb-40 pb-12"
+			id="oferta"
+		>
+			<div class="max-w-[78.875rem] mx-auto lg:px-0 px-3">
 				<div class="lg:w-[65rem] m-auto mb-24">
 					<div class="lg:w-[44.3125rem]">
 						<span class="text-[#1B5B31] block text-xs pb-4">Oferta</span>
@@ -444,7 +451,9 @@
 					/>
 				</div>
 
-				<div class="flex justify-center items-center lg:p-0 z-10 p-4">
+				<div
+					class="flex justify-center items-center z-10 lg:px-0 px-4 lg:py-0 py-6"
+				>
 					<div class="max-w-[31.25rem]">
 						<span class="text-[0.75rem] block pb-4">O firmie</span>
 						<h2 class="text-5xl font-medium leading-[3.45rem] pb-10">
@@ -494,9 +503,9 @@
 		</section>
 
 		<!-- Projects -->
-		<section class="bg-[#DCC1AB] pt-28" id="projects">
+		<section class="bg-[#DCC1AB] lg:pt-28 pt-12" id="projects">
 			<div class="max-w-[78.875rem] mx-auto px-2">
-				<div class="pb-24">
+				<div class="lg:pb-24 pb-12">
 					<span class="text-[#1B5B31] text-xs block pb-4">Realizacje</span>
 					<h2 class="text-5xl font-medium">
 						Nasze <span class="italic">projekty</span>
@@ -539,7 +548,7 @@
 		</section>
 
 		<!-- Instagram -->
-		<section class="bg-[#F5F0EC] py-[3.75rem]" id="instagram">
+		<section class="bg-[#F5F0EC] py-[3.75rem] lg:px-0 px-4" id="instagram">
 			<div
 				class="flex justify-between bg-[#1B5B31] max-w-[65rem] mx-auto py-[7.5rem] lg:px-[6.88rem] px-4 text-[#F5F0EC] lg:flex-row flex-col text-center lg:text-left"
 			>
@@ -562,7 +571,7 @@
 			</div>
 		</section>
 		<!-- Footer -->
-		<footer class="bg-[#111] py-20 text-[#F5F0EC]">
+		<footer class="bg-[#111] lg:py-20 py-12 text-[#F5F0EC]">
 			<div class="max-w-[65rem] mx-auto px-2">
 				<div
 					class="flex items-center md:justify-between md:flex-row flex-col justify-center"

@@ -633,10 +633,6 @@ html {
   display: flex;
 }
 
-.grid {
-  display: grid;
-}
-
 .hidden {
   display: none;
 }
@@ -895,10 +891,6 @@ html {
      object-fit: cover;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -907,6 +899,11 @@ html {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-4 {
@@ -932,11 +929,6 @@ html {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 .py-3 {
@@ -968,8 +960,8 @@ html {
   padding-bottom: 2.5rem;
 }
 
-.pb-24 {
-  padding-bottom: 6rem;
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pb-3 {
@@ -978,10 +970,6 @@ html {
 
 .pb-4 {
   padding-bottom: 1rem;
-}
-
-.pb-40 {
-  padding-bottom: 10rem;
 }
 
 .pb-6 {
@@ -1004,12 +992,8 @@ html {
   padding-right: calc((100% - 78.875rem) / 2);
 }
 
-.pt-28 {
-  padding-top: 7rem;
-}
-
-.pt-\[7\.5rem\] {
-  padding-top: 7.5rem;
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .text-center {
@@ -1343,13 +1327,24 @@ html {
     justify-content: normal;
   }
 
-  .lg\:p-0 {
-    padding: 0px;
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:px-\[6\.88rem\] {
     padding-left: 6.88rem;
     padding-right: 6.88rem;
+  }
+
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .lg\:pb-0 {
@@ -1358,6 +1353,22 @@ html {
 
   .lg\:pb-11 {
     padding-bottom: 2.75rem;
+  }
+
+  .lg\:pb-24 {
+    padding-bottom: 6rem;
+  }
+
+  .lg\:pb-40 {
+    padding-bottom: 10rem;
+  }
+
+  .lg\:pt-28 {
+    padding-top: 7rem;
+  }
+
+  .lg\:pt-\[7\.5rem\] {
+    padding-top: 7.5rem;
   }
 
   .lg\:text-left {
