@@ -53,3 +53,32 @@ const menu = document.querySelector('.mobile-menu')
 btn.addEventListener('click', () => {
 	menu.classList.toggle('hidden')
 })
+
+//Album
+
+const masonryImages = document.querySelectorAll('.masonry-item')
+const popup = document.getElementById('popup')
+const imgPopup = document.getElementById('popup-img')
+const btnClose = document.getElementById('close-btn')
+
+masonryImages.forEach((img) => {
+	img.addEventListener('click', () => {
+		const imgUrl = img.children[0].src
+		console.log(imgUrl)
+		imgPopup.src = imgUrl
+		popup.style.display = 'flex'
+		document.body.style.overflowY = 'hidden'
+	})
+})
+
+btnClose.addEventListener('click', () => {
+	popup.style.display = 'none'
+	document.body.style.overflowY = 'scroll'
+})
+
+popup.addEventListener('click', (e) => {
+	if (e.target === popup) {
+		popup.style.display = 'none'
+		document.body.style.overflowY = 'scroll'
+	}
+})

@@ -171,7 +171,7 @@
 		</header>
 
 		<!-- Swiper -->
-		<section class="swiper flex bg-[#DCC1AB]">
+		<section class="swiper flex bg-[#DCC1AB] relative">
 			<div class="swiper-wrapper flex">
 				<!-- Slider-1 -->
 				<div
@@ -313,6 +313,38 @@
 						alt=""
 					/>
 				</div>
+			</div>
+			<div
+				class="lg:flex hidden absolute right-0 bottom-0 z-20 items-center gap-8 bg-[#F5F0EC] py-6 px-8"
+			>
+				<button id="left">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="27"
+						height="24"
+						viewBox="0 0 27 24"
+						fill="none"
+					>
+						<path
+							d="M0.795115 10.9393C0.209328 11.5251 0.209328 12.4749 0.795114 13.0607L10.3411 22.6066C10.9268 23.1924 11.8766 23.1924 12.4624 22.6066C13.0482 22.0208 13.0482 21.0711 12.4624 20.4853L3.97709 12L12.4624 3.51472C13.0482 2.92893 13.0482 1.97918 12.4624 1.3934C11.8766 0.80761 10.9268 0.80761 10.3411 1.3934L0.795115 10.9393ZM26.1442 10.5L1.85577 10.5L1.85577 13.5L26.1442 13.5L26.1442 10.5Z"
+							fill="black"
+						/>
+					</svg>
+				</button>
+				<button id="right">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="27"
+						height="24"
+						viewBox="0 0 27 24"
+						fill="none"
+					>
+						<path
+							d="M26.2049 13.0607C26.7907 12.4749 26.7907 11.5251 26.2049 10.9393L16.6589 1.3934C16.0732 0.807611 15.1234 0.807611 14.5376 1.3934C13.9518 1.97919 13.9518 2.92893 14.5376 3.51472L23.0229 12L14.5376 20.4853C13.9518 21.0711 13.9518 22.0208 14.5376 22.6066C15.1234 23.1924 16.0732 23.1924 16.6589 22.6066L26.2049 13.0607ZM0.855774 13.5H25.1442V10.5H0.855774V13.5Z"
+							fill="black"
+						/>
+					</svg>
+				</button>
 			</div>
 		</section>
 
@@ -542,8 +574,27 @@
 				</div>
 				<!-- Gradient -->
 				<div
-					class="absolute bg-custom-gradient w-full bottom-0 left-0 h-[70%]"
-				></div>
+					class="absolute bg-custom-gradient w-full bottom-0 left-0 h-[70%] flex items-center justify-center"
+				>
+					<div class="absolute bottom-[10%]">
+						<button
+							class="py-3 px-5 border border-black rounded-[12.5rem] flex items-center"
+						>
+							Rozwiń
+							<svg
+								class="w-4 h-4 ml-2"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 16 17"
+								fill="none"
+							>
+								<path
+									d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
+									fill="#111111"
+								/>
+							</svg>
+						</button>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -578,8 +629,8 @@
 				>
 					<a class="md:pb-0 pb-4" href="#">
 						<img
-							class="w-28 h-4"
-							src="./public/img/giard-logo.svg"
+							class=""
+							src="./public/img/giard-logo-footer.svg"
 							alt="giard logo"
 						/>
 					</a>
@@ -634,7 +685,11 @@
 		</footer>
 		<!-- Scroll To Top -->
 		<button id="scrollToTopBtn" class="scrollTop hidden">Top</button>
-
+		<!-- Gallery Popup -->
+		<div class="popup" id="popup">
+			<span class="close-button" id="close-btn">X</span>
+			<img src="" alt="popup image" class="popup-image" id="popup-img" />
+		</div>
 		<!-- Scripts -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
