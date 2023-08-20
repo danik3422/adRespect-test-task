@@ -633,8 +633,16 @@ html {
   margin-top: auto;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .\!flex {
@@ -846,6 +854,10 @@ html {
   border-radius: 0.5rem;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -906,6 +918,10 @@ html {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-10 {
@@ -1254,6 +1270,10 @@ html {
   right: 30px;
   font-size: 30px;
   color: white;
+  cursor: pointer;
+}
+
+.masonry .masonry-item {
   cursor: pointer;
 }
 

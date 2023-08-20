@@ -60,16 +60,37 @@ const masonryImages = document.querySelectorAll('.masonry-item')
 const popup = document.getElementById('popup')
 const imgPopup = document.getElementById('popup-img')
 const btnClose = document.getElementById('close-btn')
+const popLeft = document.getElementById('pop-left')
+const popRight = document.getElementById('pop-right')
+let currentIndex = 0
+let startX = 0
+let endX = 0
 
-masonryImages.forEach((img) => {
+masonryImages.forEach((img, index) => {
 	img.addEventListener('click', () => {
 		const imgUrl = img.children[0].src
-		console.log(imgUrl)
 		imgPopup.src = imgUrl
 		popup.style.display = 'flex'
 		document.body.style.overflowY = 'hidden'
+		currentIndex = index
 	})
 })
+
+const showImage = (index) => {
+	if (index >= 0 && index < masonryImages.length) {
+		const imgUrl = masonryImages[index].children[0].src
+		imgPopup.src = imgUrl
+		currentIndex = index
+	}
+}
+
+const showNextImage = () => {
+	showImage((currentIndex + 1) % masonryImages.length)
+}
+
+const showPreviousImage = () => {
+	showImage((currentIndex - 1 + masonryImages.length) % masonryImages.length)
+}
 
 btnClose.addEventListener('click', () => {
 	popup.style.display = 'none'
@@ -80,5 +101,41 @@ popup.addEventListener('click', (e) => {
 	if (e.target === popup) {
 		popup.style.display = 'none'
 		document.body.style.overflowY = 'scroll'
+	}
+})
+
+popLeft.addEventListener('click', () => {
+	showPreviousImage()
+})
+
+popRight.addEventListener('click', () => {
+	showNextImage()
+})
+
+popup.addEventListener('touchstart', (e) => {
+	startX = e.touches[0].clientX
+})
+
+popup.addEventListener('touchend', (e) => {
+	endX = e.changedTouches[0].clientX
+	handleSwipe()
+})
+
+//Swipe for mobile
+const handleSwipe = () => {
+	const threshold = 50 // Minimum distance for a swipe
+
+	if (endX < startX - threshold) {
+		showNextImage()
+	} else if (endX > startX + threshold) {
+		showPreviousImage()
+	}
+}
+
+document.addEventListener('keydown', (e) => {
+	if (e.key === 'ArrowRight') {
+		showNextImage()
+	} else if (e.key === 'ArrowLeft') {
+		showPreviousImage()
 	}
 })
