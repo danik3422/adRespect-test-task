@@ -162,3 +162,11 @@ window.addEventListener('scroll', () => {
 		}
 	}
 })
+
+//Project collapse
+const collapseBtn = document.getElementById('collapse')
+const gradient = document.querySelector('.gradient')
+
+collapseBtn.addEventListener('click', () => {
+	gradient.style.display = 'none'
+})
